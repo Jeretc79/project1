@@ -38,6 +38,9 @@ function giveConcerts() {
     })
 
 };
+var platform = new H.service.Platform({
+    'apikey': '{7xUebz_AVkJGa5Oay6OiOdDlbAtO1lXJoAKSICHzTp4}'
+  });
 
 var maptypes = platform.createDefaultLayers();
 
