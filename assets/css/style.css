@@ -68,6 +68,7 @@
     background-color: black;
 }
 
+
 #lyft {
     color: #FD00BF;
 }
@@ -75,3 +76,19 @@
 .festival {
     padding-left: 20px;
 }
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+  }
+#mapdiv {
+    box-sizing: border-box;
+    width: 25%;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: solid 5px;
+    margin-bottom: 5px;
+} 
