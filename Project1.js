@@ -4,7 +4,7 @@ var map = null;
 var geocoder = null;
 let searchTopic = '';
 
-//let api_key = "R7HLXwHCCzxfPjBA";
+let api_key = "R7HLXwHCCzxfPjBA";
 //Main API Endpoint for Soundkick
 let api_endPoint = "http://www.songkick.com/developer";
 let events = '/events?q='; //endpoint returns artist and their event.
@@ -75,3 +75,8 @@ function getUserLocation(address) {
 
       <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+        {
+        }
+      }
+    
