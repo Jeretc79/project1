@@ -38,3 +38,15 @@ function giveConcerts() {
     })
 
 };
+
+var platform = new H.service.Platform({
+    'apikey': '{7xUebz_AVkJGa5Oay6OiOdDlbAtO1lXJoAKSICHzTp4}'
+  });
+
+var maptypes = platform.createDefaultLayers();
+
+ // Instantiate and display a map
+ var map = new H.Map(document.getElementById("mapdiv"), maptypes.vector.normal.map, {
+   center: {lat: 0, lng: 51},
+   zoom: 8
+ });
