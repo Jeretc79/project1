@@ -1,4 +1,4 @@
-#navbar {
+#navbar, #logo {
     background-color: black;
 }
 
@@ -40,7 +40,7 @@
 }
 
 #results {
-    height: 200%;
+    height: 500px;
     background-color: black;
 }
 
@@ -49,7 +49,27 @@
 }
 
 #result1, #result2, #result3 {
-    background-color: #2e2e2e;
+    background-color: black;
+}
+
+#banner {
+    font-size: 64px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+#needHelp {
+    font-size: 18px;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+}
+
+#transportation {
+    font-size: 64px;
+    background-color: black;
+}
+
+#lyft {
+    color: #FD00BF;
 }
 
 .festival {

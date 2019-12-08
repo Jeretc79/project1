@@ -32,13 +32,14 @@ $(".uk-form-icon").on('click', function () {
 
                 var ticketURL = response._embedded.events[i].url;
                 console.log("tickets url = " + ticketURL);
-                
+
                 for (var j=0; j<results.length; j++) {
                 var link = $("<a>");
                 link.attr("href", ticketURL);
                 link.attr("target", "_blank");
                 link.text("We Found Tickets Here");
                 link.addClass("link");
+                link.attr("style", "font-family: 'Comfortaa', cursive");
                 results[j].append(link);
                 }
             }
