@@ -2,12 +2,12 @@
 
 ### Description
 
-ShowMeShows uses several API's to locate a user and display concert information about the artist they have inputted as well as provide the option to send text reminders about user selected concerts. It gives the user an easy way to plan and expand their concert experiences, with access to concert specifics, links to tickets, links to ride-sharing websites, and a page dedicated to looking up festivals in several states across the U.S.
+ShowMeShows uses several API's to locate a user and display concert information about the artist they have inputted as well as provide the option to send text reminders about user selected concerts. With access to concert specifics, links to tickets, links to ride-sharing websites, and a page dedicated to looking up festivals in several states across the US, it gives the user an easy way to plan and expand their concert experiences.
 
 Components:
 1. UIKit API
  - Navbar with two tabs, a logo, and logo animation
- - Grid with cards
+ - Grid with divs, images, and cards
  - Images with parallax effect
  - Form with search icon to retrieve user inputted artist
  - Overlay
@@ -16,7 +16,7 @@ Components:
  - Ajax call that retrieves instances of artist's concerts
  - Venue, date, and time displayed on site with jQuery
 3. Here API
- - To retrieve user's location and match with artist's concerts
+ - Retrieve user's location to match with artist's concerts and display on live map on site
 4. Ticketmaster API
 - Ajax call to retrieve instances of artist's concerts
 - Link to ticket sites displayed on site with jQuery
@@ -62,8 +62,12 @@ The bottom of the page contains a static image and a div containing the ShowMeSh
 
 ### Developer Experience
 
+Code Summary:
+
 Unresolved:
 - When pages first load, formatting is off and default fonts are shown briefly
+
+Team's Experience:
 
 
 
