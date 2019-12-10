@@ -73,7 +73,7 @@ $("#submitBtn").on('click', function () {
         
         giveConcerts();
 
-    })
+    })a
 });
 
 function giveConcerts() {
