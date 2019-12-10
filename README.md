@@ -15,12 +15,12 @@ Components:
 2. Songkick API
  - Ajax call that retrieves instances of artist's concerts
  - Venue, date, and time displayed on site with jQuery
-3. Here API
+3. Google Maps API
  - Retrieve user's location to match with artist's concerts and display on live map on site
 4. Ticketmaster API
 - Ajax call to retrieve instances of artist's concerts
 - Link to ticket sites displayed on site with jQuery
-5. Texting API
+5. Nexmo API
 - Uses user-inputted phone number to send a text reminder for user-chosen concert
 6. jQuery generated elements, filled with ajax response data
 7. Google Fonts
