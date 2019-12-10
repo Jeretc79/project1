@@ -82,13 +82,12 @@
     border: 3px solid #73AD21;
     padding: 10px;
   }
-#mapdiv {
-    box-sizing: border-box;
-    width: 25%;
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-    border: solid 5px;
-    margin-bottom: 5px;
-} 
+  
+  #map {
+    height: 100%;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }

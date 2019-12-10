@@ -15,8 +15,13 @@ var result1 = $("#result1");
 var result2 = $("#result2");
 var result3 = $("#result3");
 results = [result1, result2, result3];
+console.log("eat shit");
+//var platform = new H.service.Platform({
+   // "apikey": "{7xUebz_AVkJGa5Oay6OiOdDlbAtO1lXJoAKSICHzTp4}",
+//"useHTTPS": true
+ // });
 
-$(".uk-form-icon").on('click', function () {
+  $(".uk-form-icon").on('click', function () {
     var artist = $("#artist-term").val().trim();
 
     $.ajax({
@@ -85,15 +90,8 @@ function giveConcerts() {
 
 };
 
-var platform = new H.service.Platform({
-    'apikey': '{7xUebz_AVkJGa5Oay6OiOdDlbAtO1lXJoAKSICHzTp4}'
+map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -34.397, lng: 150.644},
+    zoom: 8
   });
-
-var maptypes = platform.createDefaultLayers();
-
-// Instantiate and display a map
- var maptypes = new H.Map(document.getElementById("mapdiv"), maptypes.vector.normal.map, {
-   center: {lat: 0, lng: 51},
-   zoom: 8
- });
 
