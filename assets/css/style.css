@@ -10,15 +10,15 @@
     color: white;
 }
 
+#nav:hover {
+    color: #9fccff;
+    text-decoration: none;
+}
+
 #nav1 {
     font-size: 54px;
     font-family: 'Bebas Neue', cursive;
     color: white;
-}
-
-#nav:hover {
-    color: #9fccff;
-    text-decoration: none;
 }
 
 #search {
@@ -33,7 +33,7 @@
     color: white;
 }
 
-#artist-term {
+#artist-term, #city-term {
     text-transform: uppercase;
     font-family: 'Comfortaa', cursive;
 }
@@ -47,11 +47,8 @@
     background-color: black;
 }
 
-.uk-card {
-    height: 300%;
-}
-
 #result1, #result2, #result3 {
+    height: 300%;
     background-color: black;
 }
 
@@ -59,12 +56,17 @@
     font-size: 100px;
 }
 
-#needHelp {
+#need-ride {
     font-size: 22px;
     font-weight: bold;
     font-family: 'Comfortaa', cursive;
     color: white;
 }
+
+#lyft {
+    color: #FD00BF;
+}
+
 
 #copyright {
     padding: 100px;
@@ -75,16 +77,6 @@
     font-size: 64px;
     font-family: 'Bebas Neue', cursive;
 }
-
-
-#lyft {
-    color: #FD00BF;
-}
-
-.festival {
-    padding-left: 20px;
-}
-
 
 #navSide {
     padding: 0 15px 0 15px;
@@ -99,6 +91,10 @@
     padding: 10px 0 0 20px;
     font-size: 18px;
     color: #9fccff;
+}
+
+.festival {
+    padding-left: 20px;
 }
 
 .center {

@@ -7,7 +7,8 @@ var city = "portland";
 var newURL2 = baseURL2 + city + '&apikey=' + authKey;
 var newURL3 = baseURL3 + TMauthKey + '&size=200&city=' + city;
 var concertsURL;
-$("#submitBtn").on('click', function () {
+
+$("#submit-btn").on('click', function () {
     var artist = $('#artist-term').val().trim();
     var newURL = baseURL + authKey + '&query=' + artist;
     $.ajax({
@@ -25,6 +26,7 @@ $("#submitBtn").on('click', function () {
             }
         }
     });
+
     function giveConcerts() {
         $.ajax({
             url: concertsURL,
@@ -48,7 +50,7 @@ $("#submitBtn").on('click', function () {
                         var title = $("<h3>");
                         title.html(results.resultsPage.results.artist[i].displayName)
                         var date = $("<h4>");
-                        // date.html()
+                        date.html()
 
                         results[k].append(concertInfo);
                     }
@@ -56,6 +58,7 @@ $("#submitBtn").on('click', function () {
             }
         })
     };
+
     function getTickets() {
         var artist = $("#artist-term").val().trim();
         var citySearched = $("#city-term").val().trim();
