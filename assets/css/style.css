@@ -43,13 +43,17 @@
 }
 
 #results {
-    height: 500px;
+    height: 600px;
     background-color: black;
 }
 
-#result1, #result2, #result3 {
-    height: 300%;
+#result1, #result2, #result3, #image1, #link1, #link2, #link3 {
     background-color: black;
+}
+
+.uk-card {
+    padding-left: none;
+    padding-right: none;
 }
 
 #transportation {
