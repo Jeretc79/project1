@@ -76,6 +76,7 @@
     font-family: 'Bebas Neue', cursive;
 }
 
+
 #lyft {
     color: #FD00BF;
 }
@@ -83,6 +84,7 @@
 .festival {
     padding-left: 20px;
 }
+
 
 #navSide {
     padding: 0 15px 0 15px;
@@ -98,3 +100,20 @@
     font-size: 18px;
     color: #9fccff;
 }
+
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+  }
+  
+  #map {
+    height: 100%;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
