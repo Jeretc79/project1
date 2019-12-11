@@ -25,7 +25,7 @@
                 <a href="index.html" class="uk-navbar-item" id="nav">HOME</a>
             </div>
             <div class="uk-animation-toggle" tabindex="0">
-                    <a href="" class="uk-navbar-item uk-logo uk-animation-scale-down" id="nav1">ShowMeShows</a>
+                <a href="index.html" class="uk-navbar-item uk-logo uk-animation-scale-down" id="nav1">ShowMeShows</a>
             </div>
             <div class="uk-navbar-center-right tabs">
                 <a href="shows.html" class="uk-navbar-item" id="nav">FESTIVALS</a>
@@ -46,7 +46,7 @@
         </div>
         <div class="uk-width-1">
             <div id="search" class="uk-card uk-card-default uk-card-body">
-                    <p class="enter">Enter an artist name & a city name:</p>
+                <p class="enter">Enter an artist name:</p>
                 <div class="uk-inline">
 
                     <button type="submit" id="submitBtn" class="uk-form-icon uk-form-icon-flip" uk-icon="icon: search"></button>
@@ -56,8 +56,11 @@
                 </div>
             </div>
         </div>
-        <div class="uk-width-1-4">
-
+        <div class="uk-cover-container uk-width-1-4">
+            <img src="https://i.imgur.com/7AK4z5m.jpg" uk-cover>
+            <div class="uk-overlay uk-overlay-default uk-position-top">
+                <p class="user-here">Showing results for your current location, here.</p>
+            </div>
         </div>
         <div class="uk-width-3-4">
             <div id="results" class="uk-background-secondary uk-padding uk-light">
@@ -77,17 +80,19 @@
         <div class="uk-width-1">
             <div class="uk-height-large uk-background-cover uk-light uk-flex" uk-parallax="bgy: -200;"
                 style="background-image: url('https://i.imgur.com/hndWsFL.jpg');">
-                <h1 id="banner" class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
-                    SHOWMESHOWS©
+                <h1 id="transportation" class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
+                        <p id="needHelp">Need a ride?</p>
+                        <a id="lyft" href="https://www.lyft.com/rider/" target="_blank"><i class="fab fa-lyft"></i></a>
+                        <a href="https://www.uber.com/" target="_blank"><i class="fab fa-uber"></i></a>
+                        <p id="needHelp">They've got you.</p>
                 </h1>
             </div>
         </div>
         <div class="uk-width-1">
-            <div id="transportation" class="uk-background-secondary uk-padding uk-light">
-                <p id="needHelp">Need a ride?</p>
-                <a id="lyft" href="https://www.lyft.com/rider/" target="_blank"><i class="fab fa-lyft"></i></a>
-                <a href="https://www.uber.com/" target="_blank"><i class="fab fa-uber"></i></a>
-                <p id="needHelp">They've got you.</p>
+            <div id="copyright" class="uk-background-secondary uk-padding uk-light">
+                <h1 id="banner" class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
+                    SHOWMESHOWS©
+                </h1>
             </div>
             <div id="results" class="uk-background-secondary uk-padding uk-light"></div>
         </div>

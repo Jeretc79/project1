@@ -9,7 +9,7 @@ var baseURL2 = 'https://api.songkick.com/api/3.0/search/locations.json?query=';
 var authKey3 = 'aTm6J9b1v3GF9ZxpISl4sVxEzKNG6hHf';
 var baseURL3 = 'https://app.ticketmaster.com/discovery/v2/events?apikey='
 var city3 = 'portland'
-var newURL3 = baseURL3 + authKey3 + '&city=' + city3
+var newURL3 = baseURL3 + authKey3 + '&size=200' + '&city=' + city3 
 
 var result1 = $("#result1");
 var result2 = $("#result2");
@@ -28,7 +28,7 @@ console.log("eat shit");
         url: newURL3,
         method: "GET"
     }).then(function (response) {
-        console.log("tickets data = " + response);
+        console.log(response);
 
         for (var i = 0; i < response._embedded.events.length; i++) {
             if (artist === response._embedded.events[i].name) {
