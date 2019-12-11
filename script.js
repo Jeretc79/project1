@@ -5,6 +5,7 @@ var authKey = 'uyyV4zESWwQbeQrI';
 var TMauthKey = 'aTm6J9b1v3GF9ZxpISl4sVxEzKNG6hHf';
 var city = "portland";
 var newURL2 = baseURL2 + city + '&apikey=' + authKey;
+
 var newURL3 = baseURL3 + TMauthKey + '&city=' + city;
 var concertsURL;
 var showTime;
@@ -16,13 +17,14 @@ console.log(moment("13:00", 'HH:mm:ss').format('hh:mm a'));
 
 $("#submitBtn").on('click', function () {
 
+
     var artist = $('#artist-term').val().trim();
     var newURL = baseURL + authKey + '&query=' + artist;
-
     $.ajax({
         url: newURL,
         method: "GET"
     }).then(function (results) {
+
 
         for (var i = 0; i < results.resultsPage.results.artist.length; i++) {
             if (artist === results.resultsPage.results.artist[i].displayName) {
@@ -42,10 +44,12 @@ $("#submitBtn").on('click', function () {
 
     function giveConcerts() {
 
+
         $.ajax({
             url: concertsURL,
             method: "GET"
         }).then(function (response) {
+
 
             console.log("Secondary response below:")
             console.log(response);
@@ -59,11 +63,13 @@ $("#submitBtn").on('click', function () {
                 if (citySearched == songkickCity) {
                     var cityMatch = songkickCity;
                     var showTime = response.resultsPage.results.event[i].start.time;
+
                     console.log("City Match test: " + cityMatch);
                     console.log("SK City: " + response.resultsPage.results.event[i].location.city);
                     console.log("SK Venue: " + response.resultsPage.results.event[i].venue.displayName);
                     console.log("Date: " + response.resultsPage.results.event[i].start.date);
                     console.log("Time: " + response.resultsPage.results.event[i].start.time);
+
                     
                     console.log("Showtime Test : " + showTime);
                     console.log("Time Conversion : " + timeConvert);
@@ -99,6 +105,7 @@ $("#submitBtn").on('click', function () {
         })
     }
 });
+
 
 
 

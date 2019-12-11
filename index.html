@@ -9,7 +9,12 @@
 
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/css/uikit.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!--<script src="https://js.api.7xUebz_AVkJGa5Oay6OiOdDlbAtO1lXJoAKSICHzTp4.com/v3/3.1/mapsjs-core.js"
+        type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.7xUebz_AVkJGa5Oay6OiOdDlbAtO1lXJoAKSICHzTp4.com/v3/3.1/mapsjs-service.js"
+        type="text/javascript" charset="utf-8"></script>!-->
 
 </head>
 
@@ -38,20 +43,26 @@
 
 
     <div class="uk-grid-collapse uk-text-center" uk-grid>
-        <div class="uk-width-1-4">
+        <div class="uk-width-1">
             <div id="search" class="uk-card uk-card-default uk-card-body">
+                <p class="enter">Enter an artist name:</p>
                 <div class="uk-inline">
+
                     <button type="submit" id="submitBtn" class="uk-form-icon uk-form-icon-flip" uk-icon="icon: search"></button>
                     <input type="text" class="uk-input" id="artist-term">
+
                     <input type="text" class="uk-input" id="city-term">
+
                 </div>
             </div>
         </div>
-        <div class="uk-width-3-4">
-                <div id="results" class="uk-background-secondary uk-padding uk-light"></div>
+        <div class="uk-width-1">
+            <div id="results" class="uk-background-secondary uk-padding uk-light"></div>
         </div>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.js"
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
