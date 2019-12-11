@@ -1,8 +1,8 @@
 var baseURL = 'https://api.songkick.com/api/3.0/search/artists.json?apikey=';
 var authKey = 'uyyV4zESWwQbeQrI';
-var artist = 'queen';
-var newURL = baseURL + authKey + '&query=' + artist;
+
 var baseURL2 = 'https://api.songkick.com/api/3.0/search/locations.json?query=';
+
 // var newURL2 = baseURL2 + city + '&apikey=' + authKey;
 
 
@@ -15,8 +15,13 @@ var result1 = $("#result1");
 var result2 = $("#result2");
 var result3 = $("#result3");
 results = [result1, result2, result3];
+console.log("eat shit");
+//var platform = new H.service.Platform({
+   // "apikey": "{7xUebz_AVkJGa5Oay6OiOdDlbAtO1lXJoAKSICHzTp4}",
+//"useHTTPS": true
+ // });
 
-$(".uk-form-icon").on('click', function () {
+  $(".uk-form-icon").on('click', function () {
     var artist = $("#artist-term").val().trim();
 
     $.ajax({
@@ -48,4 +53,45 @@ $(".uk-form-icon").on('click', function () {
     })
 })
 
+var city = "portland";
+var newURL2 = baseURL2 + city + '&apikey=' + authKey;
+var concertsURL;
+
+$("#submitBtn").on('click', function () {
+
+    var artist = $('#search-term').val().trim();
+    var newURL = baseURL + authKey + '&query=' + artist;
+
+    $.ajax({
+        url: newURL,
+        method: "GET"
+    }).then(function (results) {
+        
+        console.log(results.resultsPage.results.artist[0].displayName);
+
+        concertsURL = results.resultsPage.results.artist[0].identifier[0].eventsHref + "?apikey=uyyV4zESWwQbeQrI";
+        
+        giveConcerts();
+
+    })a
+});
+
+function giveConcerts() {
+
+    $.ajax({
+        url: concertsURL,
+        method: "GET"
+    }).then(function (response) {
+        
+        console.log(response.resultsPage.results.event[0].location.city);
+        console.log(response.resultsPage.results.event[0].venue.displayName);
+
+    })
+
+};
+
+map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -34.397, lng: 150.644},
+    zoom: 8
+  });
 

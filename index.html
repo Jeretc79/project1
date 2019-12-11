@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/css/uikit.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Bebas+Neue&display=swap" rel="stylesheet">
 
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABv4qZ2Y8dl33hKx95NkqreIx1i6ux4Us&callback=initMap"></script>
+
 </head>
 
 <body>
@@ -46,6 +48,9 @@
             <div id="search" class="uk-card uk-card-default uk-card-body">
                 <p class="enter">Enter an artist name:</p>
                 <div class="uk-inline">
+
+                    <button type="submit" id="submitBtn" class="uk-form-icon uk-form-icon-flip" uk-icon="icon: search"></button>
+                    <input type="text" class="uk-input" id="search-term">
                     <button class="uk-form-icon uk-form-icon-flip" uk-icon="icon: search"></button>
                     <input class="uk-input uk-form-width-large" id="artist-term">
                     <input class="uk-input uk-form-width-large" id="city-term">
@@ -97,6 +102,7 @@
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/25191fb013.js" crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/js/uikit-icons.min.js"></script>
 </body>
