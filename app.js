@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 
 // Catch form submit
 app.post('/', (req, res) => {
-  // res.send(req.body);
+  //res.send(req.body);
   // console.log(req.body);
   const { number, text } = req.body;
 
