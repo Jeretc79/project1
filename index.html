@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/css/uikit.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Bebas+Neue&display=swap" rel="stylesheet">
 
+
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABv4qZ2Y8dl33hKx95NkqreIx1i6ux4Us&callback=initMap"></script>
+
 
 </head>
 
@@ -50,9 +52,9 @@
                 <div class="uk-inline">
 
                     <button type="submit" id="submitBtn" class="uk-form-icon uk-form-icon-flip" uk-icon="icon: search"></button>
-                    <input type="text" class="uk-input" id="search-term">
-                    <button class="uk-form-icon uk-form-icon-flip" uk-icon="icon: search"></button>
-                    <input class="uk-input uk-form-width-large" id="artist-term">
+                    <input type="text" class="uk-input" id="artist-term">
+                    <input class="uk-input uk-form-width-large" id="city-term">
+
                 </div>
             </div>
         </div>
@@ -94,11 +96,8 @@
                     SHOWMESHOWS©
                 </h1>
             </div>
-            <div id="results" class="uk-background-secondary uk-padding uk-light"></div>
         </div>
     </div>
-    <br>
-    <div id="map"></div>
     
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
