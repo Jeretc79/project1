@@ -1,8 +1,18 @@
 #navbar {
+    height: 100px;
     background-color: black;
 }
 
-#nav, #nav1 {
+#nav {
+    padding-top: 15px;
+    font-size: 16px;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+}
+
+#nav1 {
+    font-size: 54px;
+    font-family: 'Bebas Neue', cursive;
     color: white;
 }
 
@@ -11,56 +21,99 @@
     text-decoration: none;
 }
 
-#nav1 {
-    font-size: 48px;
-    font-family: 'Bebas Neue', cursive;
-}
-
-#navSide {
-    padding: 0 15px 0 15px;
-    background-color: black;
-    color: white;
-}
-
-#header1 {
-    padding: 10px 0 0 20px;
-    color: #9fccff;
-}
-
 #search {
     height: 100%;
     background-color: #2531e9;
 }
 
 .enter {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     font-family: 'Comfortaa', cursive;
     color: white;
 }
 
+#artist-term {
+    text-transform: uppercase;
+    font-family: 'Comfortaa', cursive;
+}
+
+.user-here {
+    font-family: 'Comfortaa', cursive;
+}
+
 #results {
-    height: 100%;
+    height: 500px;
     background-color: black;
 }
 
+.uk-card {
+    height: 300%;
+}
+
+#result1, #result2, #result3 {
+    background-color: black;
+}
+
+#transportation {
+    font-size: 100px;
+}
+
+#needHelp {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+}
+
+#copyright {
+    padding: 100px;
+    background-color: black
+}
+
+#banner {
+    font-size: 64px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+#lyft {
+    color: #FD00BF;
+}
 
 .festival {
     padding-left: 20px;
 }
+
+
+#navSide {
+    padding: 0 15px 0 15px;
+    background-color: black;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+}
+
+#header1 {
+    padding: 10px 0 0 20px;
+    font-size: 18px;
+    color: #9fccff;
+}
+
 .center {
     margin: auto;
     width: 60%;
     border: 3px solid #73AD21;
     padding: 10px;
   }
-#mapdiv {
-    box-sizing: border-box;
-    width: 25%;
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-    border: solid 5px;
-    margin-bottom: 5px;
-} 
+  
+  #map {
+    height: 100%;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
