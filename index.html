@@ -48,7 +48,8 @@
             <div id="search" class="uk-card uk-card-default uk-card-body">
                 <p class="enter">Enter an artist name:</p>
                 <div class="uk-inline">
-                    <button type="submit" id="submit-btn" class="uk-form-icon uk-form-icon-flip" uk-icon="icon: search"></button>
+                    <button type="submit" id="submit-btn" class="uk-form-icon uk-form-icon-flip"
+                        uk-icon="icon: search"></button>
                     <input class="uk-input uk-form-width-large" id="artist-term">
                     <input class="uk-input uk-form-width-large" id="city-term">
                 </div>
@@ -71,12 +72,24 @@
                     </div>
                     <div>
                         <div id="result2" class="uk-card uk-card-secondary uk-card-body"></div>
-                        <div id="link2" class="uk-card uk-card-secondary uk-card-body"></div>
+                        <div id="link1" class="uk-card uk-card-secondary uk-card-body"></div>
+                        <div id="result3" class="uk-card uk-card-secondary uk-card-body"></div>
                     </div>
                     <!-- <div>
                         <div id="result3" class="uk-card uk-card-secondary uk-card-body"></div>
                         <div id="link3" class="uk-card uk-card-secondary uk-card-body"></div>
                     </div> -->
+                    <div id="phone-modal" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body">
+                            <h2 class="uk-modal-title">Sign Up For Text Reminder</h2>
+                            <p>By entering your number below you are agreeing to receive a text message reminder from ShowMeShows for the concert you searched. Your reminder will be sent 3 weeks before the show.</p>
+                            <input class="uk-input uk-form-width-medium" id="phone">
+                            <p class="uk-text-right">
+                                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                                <button class="uk-button uk-button-primary" type="button" id="phone-save">Save</button>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -84,10 +97,10 @@
             <div class="uk-height-large uk-background-cover uk-light uk-flex" uk-parallax="bgy: -200;"
                 style="background-image: url('https://i.imgur.com/hndWsFL.jpg');">
                 <h1 id="transportation" class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
-                        <p id="need-ride">Need a ride?</p>
-                        <a id="lyft" href="https://www.lyft.com/rider/" target="_blank"><i class="fab fa-lyft"></i></a>
-                        <a href="https://www.uber.com/" target="_blank"><i class="fab fa-uber"></i></a>
-                        <p id="need-ride">They've got you.</p>
+                    <p id="need-ride">Need a ride?</p>
+                    <a id="lyft" href="https://www.lyft.com/rider/" target="_blank"><i class="fab fa-lyft"></i></a>
+                    <a href="https://www.uber.com/" target="_blank"><i class="fab fa-uber"></i></a>
+                    <p id="need-ride">They've got you.</p>
                 </h1>
             </div>
         </div>
@@ -103,7 +116,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
-    
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -112,7 +125,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/js/uikit-icons.min.js"></script>
-    
+
 </body>
 
 </html>

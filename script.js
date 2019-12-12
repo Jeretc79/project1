@@ -12,22 +12,23 @@ var concertsURL;
 var result1 = $("#result1");
 var result2 = $("#result2");
 var result3 = $("#result3");
-var results = [result1, result2, result3];
 var imageDiv = $("#image1");
 var link1 = $("#link1");
 var link2 = $("#link2");
 var link3 = $("#link3");
-var links = [link1, link2, link3];
+
+
 
 $("#submit-btn").on('click', function () {
     var artist = $('#artist-term').val().trim();
+    var artist1 = artist.charAt(0).toUpperCase() + artist.substring(1);
     var newURL = baseURL + authKey + '&query=' + artist;
     $.ajax({
         url: newURL,
         method: "GET"
     }).then(function (results) {
         for (var i = 0; i < results.resultsPage.results.artist.length; i++) {
-            if (artist === results.resultsPage.results.artist[i].displayName) {
+            if (artist1 == results.resultsPage.results.artist[i].displayName) {
                 var songkickArtist = results.resultsPage.results.artist[i].displayName;
                 console.log("First function artist: " + songkickArtist);
 
@@ -109,6 +110,7 @@ $("#submit-btn").on('click', function () {
 
     function getTickets() {
         var artist = $("#artist-term").val().trim();
+        var artist1 = artist.charAt(0).toUpperCase() + artist.substring(1);
         var citySearched = $("#city-term").val().trim();
         var ticketURL = baseURL3 + TMauthKey + '&size=200&city=' + citySearched;
 
@@ -121,7 +123,7 @@ $("#submit-btn").on('click', function () {
             console.log(data);
 
             for (var i = 0; i < data._embedded.events.length; i++) {
-                if (artist === data._embedded.events[i].name) {
+                if (artist1 == data._embedded.events[i].name) {
                     var artistResult = data._embedded.events[i].name;
                     console.log("TM artist: " + artistResult);
                     console.log("TM url: " + data._embedded.events[i].url);
@@ -129,14 +131,26 @@ $("#submit-btn").on('click', function () {
                     var image = $("<img>");
                     image.attr("src", data._embedded.events[i].images[0].url);
                     image.attr("style", "padding-top: 5px; padding-bottom: 5px; height: 75px, width: 75px;");
+                    var ticketIcon = $("<i>");
+                    ticketIcon.addClass("fas fa-ticket-alt");
                     var link = $("<a>");
-                    link.attr("href", ticketURL);
+                    link.attr("href", data._embedded.events[i].url);
                     link.attr("target", "_blank");
-                    link.text("We Found Tickets Here");
+                    link.text("We found tickets here ");
                     link.addClass("link");
                     link.attr("style", "text-transform: uppercase; font-family: 'Comfortaa', cursive");
+                    link.append(ticketIcon);
+                    var phoneIcon = $("<i>");
+                    phoneIcon.addClass("fas fa-mobile-alt");
+                    var reminder = $("<a>");
+                    reminder.attr("href", "Reminder.html");
+                    reminder.attr("uk-modal");
+                    reminder.text("Sign up for a text reminder ")
+                    reminder.attr("style", "font-family: 'Comfortaa', cursive");
+                    reminder.append(phoneIcon);
                     imageDiv.html(image);
-                    link2.html(link);
+                    link1.html(link);
+                    result3.html(reminder);
                 }
             }
         })
