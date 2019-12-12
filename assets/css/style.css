@@ -101,21 +101,11 @@
     padding-left: 20px;
 }
 
-.center {
-    margin: auto;
-    width: 60%;
-    border: 3px solid #73AD21;
-    padding: 10px;
-  }
   
-  #map {
+#map-canvas {
     height: 100%;
-  }
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
+}
+
 
 .signup-heading {
     text-transform: uppercase;
