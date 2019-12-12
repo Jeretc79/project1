@@ -14,10 +14,6 @@ var result2 = $("#result2");
 var result3 = $("#result3");
 var imageDiv = $("#image1");
 var link1 = $("#link1");
-var link2 = $("#link2");
-var link3 = $("#link3");
-
-
 
 $("#submit-btn").on('click', function () {
     var artist = $('#artist-term').val().trim();
