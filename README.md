@@ -32,9 +32,9 @@ https://github.com/Jeretc79/project1
 
 ### User Experience
 
-![Top Home Page](filler.jpg)
+![Top Home Page](https://i.imgur.com/QCySLCM.jpg)
 
-The user is greeted with the top portion of the home page where they see the navbar, which holds an animated logo, a "home" tab, and a "festivals" tab. Below the navbar is an image of a concert which, uplon scrolling, has a parallax effect. Below the image is a form where the user enter's an artist's name.
+The user is greeted with the top portion of the home page which includes a navbar, a concert image, and a input form. The navbar contains an animated logo, a "home" tab, and a "festivals" tab. The image is that of a concert which, uplon scrolling, has a parallax effect. The form is where the user enters an artist's name to search for a concert.
 
 ![Main Content Home](filler.jpg)
 
