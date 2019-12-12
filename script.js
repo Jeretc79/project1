@@ -1,10 +1,10 @@
 var baseURL = 'https://api.songkick.com/api/3.0/search/artists.json?apikey=';
 var baseURL2 = 'https://api.songkick.com/api/3.0/search/locations.json?query=';
-<<<<<<< HEAD
+
 var baseURL3 = 'https://app.ticketmaster.com/discovery/v2/events?apikey=';
 var authKey = 'uyyV4zESWwQbeQrI';
 var TMauthKey = 'aTm6J9b1v3GF9ZxpISl4sVxEzKNG6hHf';
-=======
+
 
 // var newURL2 = baseURL2 + city + '&apikey=' + authKey;
 
@@ -56,7 +56,7 @@ console.log("eat shit");
     })
 })
 
->>>>>>> dafe7bffd52407b85406966db0ce961a55640e67
+
 var city = "portland";
 var newURL2 = baseURL2 + city + '&apikey=' + authKey;
 var newURL3 = baseURL3 + TMauthKey + '&size=200&city=' + city;
@@ -68,7 +68,7 @@ $("#submitBtn").on('click', function () {
         url: newURL,
         method: "GET"
     }).then(function (results) {
-<<<<<<< HEAD
+ 
         for (var i = 0; i < results.resultsPage.results.artist.length; i++) {
             if (artist === results.resultsPage.results.artist[i].displayName) {
                 var skArtist = results.resultsPage.results.artist[i].displayName;
@@ -140,7 +140,7 @@ $("#submitBtn").on('click', function () {
         })
     }
 });
-=======
+
         
         console.log(results.resultsPage.results.artist[0].displayName);
 
@@ -170,4 +170,4 @@ map = new google.maps.Map(document.getElementById('map'), {
     zoom: 8
   });
 
->>>>>>> dafe7bffd52407b85406966db0ce961a55640e67
+
