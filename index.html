@@ -10,10 +10,8 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/css/uikit.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Bebas+Neue&display=swap" rel="stylesheet">
-
-
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABv4qZ2Y8dl33hKx95NkqreIx1i6ux4Us&callback=initMap"></script>
-
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="https://maps.googleapis.com/maps/AIzaSyABv4qZ2Y8dl33hKx95NkqreIx1i6ux4Us/js?sensor=false"></script>
 
 </head>
 
@@ -51,15 +49,16 @@
                 <p class="enter">Enter an artist name:</p>
                 <div class="uk-inline">
 
-                    <button type="submit" id="submitBtn" class="uk-form-icon uk-form-icon-flip" uk-icon="icon: search"></button>
+                    <button type="submit" id="submit-btn" class="uk-form-icon uk-form-icon-flip" uk-icon="icon: search"></button>
                     <input type="text" class="uk-input" id="artist-term">
                     <input class="uk-input uk-form-width-large" id="city-term">
 
                 </div>
             </div>
         </div>
-        <div class="uk-cover-container uk-width-1-4">
-            <img src="https://i.imgur.com/7AK4z5m.jpg" uk-cover>
+        <div class="uk-cover-container uk-width-1-4" id="map_canvas">
+            <!-- HI JERET! you can put the map here. the div is ^ that. that one v is the overlaying caption thing.
+            it comes after because uikit does everything in reverse order. -->
             <div class="uk-overlay uk-overlay-default uk-position-top">
                 <p class="user-here">Showing results for your current location, here.</p>
             </div>
@@ -98,7 +97,9 @@
             </div>
         </div>
     </div>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
@@ -106,6 +107,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/js/uikit-icons.min.js"></script>
+    
 </body>
 
 </html>
