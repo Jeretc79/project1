@@ -42,9 +42,9 @@ The user is greeted with the top portion of the home page which includes a navba
 
 Below the search form is a map on the left, displaying the user's current location, and an overlaying message which states "Showing results for your current location, here." To the right of the map are black cards over a black background. The results of the search print onto the cards. The contents of the search results are: name of artist, photo of artist/artist logo, venue, city, date of show, time of show, a link to a ticket hosting website with the text "We found tickets here," and a link with the text "Sign up for a text reminder." 
 
-![Sign Up Page](filler.jpg)
+![Sign Up Page](https://i.imgur.com/dd0NJw2.jpg)
 
-This second link takes the user to another page where they can input their phone number to receive a reminder about the concert that was displayed. The page is similar to the home page, but simplified, with an image at the bottom.
+This second link takes the user to another page where they can input their phone number to receive a reminder about the concert that was displayed, choosing to be alerted 3 weeks, two weeks, one week, or one month before the show date. The page is similar to the home page, but simplified, with an image at the bottom.
 
 ![Bottom Home](https://i.imgur.com/NEpfEa0.jpg)
 
@@ -64,14 +64,13 @@ The bottom of the page contains a static image and a div containing the ShowMeSh
 
 ### Developer Experience
 
-Code Summary:
-
 Unresolved:
 - When pages first load, formatting is off and default fonts are shown briefly
 
 Plans for Future Development:
  - List more than one concert, ideally concerts in nearby cities as well as user-located city
  - Provide suggestions for concerts based on user location
+ - Be able to search for/receive reminders for festivals
 
 Team's Experience:
 
