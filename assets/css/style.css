@@ -10,15 +10,15 @@
     color: white;
 }
 
+#nav:hover {
+    color: #9fccff;
+    text-decoration: none;
+}
+
 #nav1 {
     font-size: 54px;
     font-family: 'Bebas Neue', cursive;
     color: white;
-}
-
-#nav:hover {
-    color: #9fccff;
-    text-decoration: none;
 }
 
 #search {
@@ -33,7 +33,7 @@
     color: white;
 }
 
-#artist-term {
+#artist-term, #city-term {
     text-transform: uppercase;
     font-family: 'Comfortaa', cursive;
 }
@@ -43,28 +43,34 @@
 }
 
 #results {
-    height: 500px;
+    height: 600px;
+    background-color: black;
+}
+
+#result1, #result2, #result3, #image1, #link1, #link2, #link3 {
     background-color: black;
 }
 
 .uk-card {
-    height: 300%;
-}
-
-#result1, #result2, #result3 {
-    background-color: black;
+    padding-left: none;
+    padding-right: none;
 }
 
 #transportation {
     font-size: 100px;
 }
 
-#needHelp {
+#need-ride {
     font-size: 22px;
     font-weight: bold;
     font-family: 'Comfortaa', cursive;
     color: white;
 }
+
+#lyft {
+    color: #FD00BF;
+}
+
 
 #copyright {
     padding: 100px;
@@ -75,16 +81,6 @@
     font-size: 64px;
     font-family: 'Bebas Neue', cursive;
 }
-
-
-#lyft {
-    color: #FD00BF;
-}
-
-.festival {
-    padding-left: 20px;
-}
-
 
 #navSide {
     padding: 0 15px 0 15px;
@@ -101,19 +97,35 @@
     color: #9fccff;
 }
 
-.center {
-    margin: auto;
-    width: 60%;
-    border: 3px solid #73AD21;
-    padding: 10px;
-  }
+.festival {
+    padding-left: 20px;
+}
+
   
-  #map {
+#map-canvas {
     height: 100%;
-  }
-  html, body {
+}
+
+
+.signup-heading {
+    text-transform: uppercase;
+    font-family: 'Comfortaa', cursive;
+}
+
+#text-signup {
+    height: 380px;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    background-color: black;
+}
+
+#phone-submit-btn {
+    color: white;
+    font-family: 'Comfortaa';
+    background-color: black;
+}
+
+#map-canvas {
     height: 100%;
-    margin: 0;
-    padding: 0;
-  }
+}
 
