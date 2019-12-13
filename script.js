@@ -10,7 +10,6 @@ var newURL2 = baseURL2 + city + '&apikey=' + authKey;
 var newURL3 = baseURL3 + TMauthKey + '&city=' + city;
 var newURL4 = baseURL4 + mapAuthKey + '&callback=initMap';
 var concertsURL;
-
 var result1 = $("#result1");
 var result2 = $("#result2");
 var result3 = $("#result3");
