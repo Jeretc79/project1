@@ -27,9 +27,9 @@ Components:
 8. FontAwesome icons 
 - Lyft and Uber, embedded in a tags with links to respective websites
 
-
 ### Links to Project
 
+https://jeretc79.github.io/project1/
 https://github.com/Jeretc79/project1
 
 ### User Experience
@@ -64,7 +64,7 @@ The bottom of the page contains a static image and a div containing the ShowMeSh
 
 ### Developer Experience
 
-Unresolved:
+Bugs:
 - When pages first load, formatting is off and default fonts are shown briefly
 
 Plans for Future Development:
@@ -73,8 +73,7 @@ Plans for Future Development:
  - Be able to search for/receive reminders for festivals
 
 Team's Experience:
-
-
+We enjoyed the challenge of incorporating several APIs into our application. The crossovers weren't always straightforward but the work we put in paid off. We faced challenges working simultaneously through GitHub, but saw it as a learning experience for the working world. 
 
 
 
