@@ -135,3 +135,7 @@
     background-color: black;
 }
 
+#map-canvas {
+    height: 100%;
+}
+
