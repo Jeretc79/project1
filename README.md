@@ -38,7 +38,7 @@ https://github.com/Jeretc79/project1
 
 The user is greeted with the top portion of the home page which includes a navbar, a concert image, and a input form. The navbar contains an animated logo, a "home" tab, and a "festivals" tab. The image is that of a concert which, uplon scrolling, has a parallax effect. The form is where the user enters an artist's name to search for a concert.
 
-![Main Content Home](filler.jpg)
+![Main Content Home](https://i.imgur.com/xUt4C1c.png)
 
 Below the search form is a map on the left, displaying the user's current location, and an overlaying message which states "Showing results for your current location, here." To the right of the map are black cards over a black background. The results of the search print onto the cards. The contents of the search results are: name of artist, photo of artist/artist logo, venue, city, date of show, time of show, a link to a ticket hosting website with the text "We found tickets here," and a link with the text "Sign up for a text reminder." 
 
