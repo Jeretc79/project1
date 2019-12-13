@@ -4,6 +4,7 @@ var baseURL3 = 'https://app.ticketmaster.com/discovery/v2/events?apikey=';
 var baseURL4 = 'https://maps.googleapis.com/maps/api/js?key=';
 var authKey = 'uyyV4zESWwQbeQrI';
 var TMauthKey = 'aTm6J9b1v3GF9ZxpISl4sVxEzKNG6hHf';
+
 var mapAuthKey = 'AIzaSyABv4qZ2Y8dl33hKx95NkqreIx1i6ux4Us';
 var city = "Portland, OR, US";
 var newURL2 = baseURL2 + city + '&apikey=' + authKey;
@@ -19,6 +20,23 @@ var link1 = $("#link1");
 
 $("#submit-btn").on('click', function () {
     
+=======
+var city = "portland";
+var newURL2 = baseURL2 + city + '&apikey=' + authKey;
+
+var newURL3 = baseURL3 + TMauthKey + '&city=' + city;
+var concertsURL;
+var showTime;
+var timeConvert = moment(showTime, 'HH:mm:ss').format('hh:mm a');
+
+console.log(moment("13:00", 'HH:mm:ss').format('hh:mm a'));
+
+
+
+$("#submitBtn").on('click', function () {
+
+
+
     var artist = $('#artist-term').val().trim();
     var artist1 = artist.charAt(0).toUpperCase() + artist.substring(1);
     var newURL = baseURL + authKey + '&query=' + artist;
@@ -26,8 +44,11 @@ $("#submit-btn").on('click', function () {
         url: newURL,
         method: "GET"
     }).then(function (results) {
+
+
         for (var i = 0; i < results.resultsPage.results.artist.length; i++) {
-            if (artist1 == results.resultsPage.results.artist[i].displayName) {
+            if (artist === results.resultsPage.results.artist[i].displayName) {
+
                 var songkickArtist = results.resultsPage.results.artist[i].displayName;
                 console.log("First function artist: " + songkickArtist);
 
@@ -54,19 +75,32 @@ $("#submit-btn").on('click', function () {
             console.log("Secondary response below:")
             console.log(response);
 
+
             var citySearched = city;
+
+            var citySearched = $("#city-term").val().trim();
+
             var citiesIndex = response.resultsPage.results.event.length;
 
             for (var i = 0; i < citiesIndex; i++) {
+
                 var songkickCity = response.resultsPage.results.event[i].location.city
+
                 if (citySearched === songkickCity) {
                     var cityMatch = response.resultsPage.results.event[i];
                     // var showTime = response.resultsPage.results.event[i].start.time;
                     console.log("City Match test: " + cityMatch.location.city);
+
+                if (citySearched == songkickCity) {
+                    var cityMatch = songkickCity;
+                    var showTime = response.resultsPage.results.event[i].start.time;
+
+                    console.log("City Match test: " + cityMatch);
                     console.log("SK City: " + response.resultsPage.results.event[i].location.city);
                     console.log("SK Venue: " + response.resultsPage.results.event[i].venue.displayName);
                     console.log("Date: " + response.resultsPage.results.event[i].start.date);
                     console.log("Time: " + response.resultsPage.results.event[i].start.time);
+
 
                     var concertInfo = $("<div>");
                     var title = $("<h3>");
@@ -87,6 +121,16 @@ $("#submit-btn").on('click', function () {
                         timeValue = "" + (hours - 12);
                     } else if (hours == 0) {
                         timeValue = "12";
+
+
+                    console.log("Showtime Test : " + showTime);
+                    console.log("Time Conversion : " + timeConvert);
+                    for (var j = 0; j < results.length; j++) {
+                        var concertInfo = $("<div>");
+                        var title = $("<h3>");
+
+                        
+
                     }
                     timeValue += (minutes < 10) ? ":0" + minutes : ":" + minutes;
                     timeValue += (hours >= 12) ? " PM" : " AM";
@@ -104,8 +148,10 @@ $("#submit-btn").on('click', function () {
                     result2.html(concertInfo);
                 }
             }
+
         })
     };
+
 
     function getTickets() {
         var artist = $("#artist-term").val().trim();
@@ -126,6 +172,7 @@ $("#submit-btn").on('click', function () {
                     var artistResult = data._embedded.events[i].name;
                     console.log("TM artist: " + artistResult);
                     console.log("TM url: " + data._embedded.events[i].url);
+
 
                     var image = $("<img>");
                     image.attr("src", data._embedded.events[i].images[0].url);
@@ -151,11 +198,24 @@ $("#submit-btn").on('click', function () {
                     imageDiv.html(image);
                     link1.html(link);
                     result3.html(reminder);
+
+                    for (var j = 0; j < results.length; j++) {
+                        var link = $("<a>");
+                        link.attr("href", ticketURL);
+                        link.attr("target", "_blank");
+                        link.text("We Found Tickets Here");
+                        link.addClass("link");
+                        link.attr("style", "font-family: 'Comfortaa', cursive");
+                        results[j].append(link);
+                    }
+
+
                 }
             }
         })
     }
 });
+
 
 var map, infoWindow;
 function initMap() {
@@ -186,6 +246,28 @@ function initMap() {
     }
 }
 
+
+
+console.log(results.resultsPage.results.artist[0].displayName);
+
+concertsURL = results.resultsPage.results.artist[0].identifier[0].eventsHref + "?apikey=uyyV4zESWwQbeQrI";
+
+giveConcerts();
+
+    }) a
+});
+
+function giveConcerts() {
+
+    $.ajax({
+        url: concertsURL,
+        method: "GET"
+    }).then(function (response) {
+
+        console.log(response.resultsPage.results.event[0].location.city);
+        console.log(response.resultsPage.results.event[0].venue.displayName);
+
+
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
     infoWindow.setContent(browserHasGeolocation ?
@@ -194,4 +276,18 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.open(map);
 
 };
+
+
+function initialize() {
+    var map_canvas = document.getElementById('map_canvas');
+    var map_options = {
+      center: new google.maps.LatLng(51.372658, 1.354386),
+      zoom:16,
+      mapTypeId: google.maps.MapTypeId.HYBRID
+    }
+    var map = new google.maps.Map(map_canvas, map_options)
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+
 
