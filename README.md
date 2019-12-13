@@ -24,10 +24,12 @@ Components:
 - Uses user-inputted phone number to send a text reminder for user-chosen concert
 6. jQuery generated elements, filled with ajax response data
 7. Google Fonts
-8. FontAwesome icons - Lyft and Uber, embedded in a tags with links to respective websites
+8. FontAwesome icons 
+- Lyft and Uber, embedded in a tags with links to respective websites
 
 ### Links to Project
 
+https://jeretc79.github.io/project1/
 https://github.com/Jeretc79/project1
 
 ### User Experience
@@ -36,40 +38,42 @@ https://github.com/Jeretc79/project1
 
 The user is greeted with the top portion of the home page which includes a navbar, a concert image, and a input form. The navbar contains an animated logo, a "home" tab, and a "festivals" tab. The image is that of a concert which, uplon scrolling, has a parallax effect. The form is where the user enters an artist's name to search for a concert.
 
-![Main Content Home](filler.jpg)
+![Main Content Home](https://i.imgur.com/xUt4C1c.png)
 
-Below the search form is a map on the left, displaying the user's current location, and an overlaying message which states "Showing results for your current location, here." To the right of the map are black cards over a black background. The results of the search print onto the cards.
+Below the search form is a map on the left, displaying the user's current location, and an overlaying message which states "Showing results for your current location, here." To the right of the map are black cards over a black background. The results of the search print onto the cards. The contents of the search results are: name of artist, photo of artist/artist logo, venue, city, date of show, time of show, a link to a ticket hosting website with the text "We found tickets here," and a link with the text "Sign up for a text reminder." 
 
-![Search Results](filler.jpg)
+![Sign Up Page](https://i.imgur.com/dd0NJw2.jpg)
 
-The contents of the search results are: name of artist, date of show, time of show, venue and city playing as well as a link to a ticket hosting website with the text "We found tickets here."
+This second link takes the user to another page where they can input their phone number to receive a reminder about the concert that was displayed, choosing to be alerted 3 weeks, two weeks, one week, or one month before the show date. The page is similar to the home page, but simplified, with an image at the bottom.
 
-![Bottom Home](filler.jpg)
+![Bottom Home](https://i.imgur.com/NEpfEa0.jpg)
 
 Below the map and search results is another parallax image with Lyft and Uber icons that can be clicked to be directed to each company's website in a new tab. The messages, "Need a ride?", "They've got you." are displayed above and below the linked icons. Below the transportation icons is a div with the ShowMeShows logo and copyright symbol.
 
-![Festivals Page](filler.jpg)
+![Festivals Page](https://i.imgur.com/gYRJKbB.jpg)
 
 When the user navigates to the "Festivals" page via the navbar, they are taken to a page with the same navbar, another parralax image, and a list navigation displayed below.
 
-![Festivals List Nav](filler.jpg)
+![Festivals List Nav](https://i.imgur.com/p5e2nVs.png)
 
 The festivals list navigation is sorted by state, with most states listed. Clicking on a state open's up a list of festivals that take place in that state yearly. Clicking on each festival directs the user to that festival's website in a new tab.
 
-![Bottom Festivals Page](filler.jpg)
+![Bottom Festivals Page](https://i.imgur.com/TzCpGx7.jpg)
 
 The bottom of the page contains a static image and a div containing the ShowMeShows logo and copyright symbol.
 
 ### Developer Experience
 
-Code Summary:
-
-Unresolved:
+Bugs:
 - When pages first load, formatting is off and default fonts are shown briefly
 
+Plans for Future Development:
+ - List more than one concert, ideally concerts in nearby cities as well as user-located city
+ - Provide suggestions for concerts based on user location
+ - Be able to search for/receive reminders for festivals
+
 Team's Experience:
-
-
+We enjoyed the challenge of incorporating several APIs into our application. The crossovers weren't always straightforward but the work we put in paid off. We faced challenges working simultaneously through GitHub, but saw it as a learning experience for the working world. 
 
 
 

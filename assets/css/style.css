@@ -71,7 +71,6 @@
     color: #FD00BF;
 }
 
-
 #copyright {
     padding: 100px;
     background-color: black
@@ -82,7 +81,7 @@
     font-family: 'Bebas Neue', cursive;
 }
 
-#navSide {
+#nav-side {
     padding: 0 15px 0 15px;
     background-color: black;
     text-transform: uppercase;
@@ -101,7 +100,6 @@
     padding-left: 20px;
 }
 
-  
 #map-canvas {
     height: 100%;
 }
@@ -128,4 +126,5 @@
 #map-canvas {
     height: 100%;
 }
+
 
