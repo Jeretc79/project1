@@ -1,12 +1,14 @@
 var baseURL = 'https://api.songkick.com/api/3.0/search/artists.json?apikey=';
 var baseURL2 = 'https://api.songkick.com/api/3.0/search/locations.json?query=';
 var baseURL3 = 'https://app.ticketmaster.com/discovery/v2/events?apikey=';
+var baseURL4 = 'https://maps.googleapis.com/maps/api/js?key=';
 var authKey = 'uyyV4zESWwQbeQrI';
 var TMauthKey = 'aTm6J9b1v3GF9ZxpISl4sVxEzKNG6hHf';
-var city = "portland";
+var mapAuthKey = 'AIzaSyABv4qZ2Y8dl33hKx95NkqreIx1i6ux4Us';
+var city = "Portland, OR, US";
 var newURL2 = baseURL2 + city + '&apikey=' + authKey;
-
 var newURL3 = baseURL3 + TMauthKey + '&city=' + city;
+var newURL4 = baseURL4 + mapAuthKey + '&callback=initMap';
 var concertsURL;
 
 var result1 = $("#result1");
@@ -14,12 +16,9 @@ var result2 = $("#result2");
 var result3 = $("#result3");
 var imageDiv = $("#image1");
 var link1 = $("#link1");
-var link2 = $("#link2");
-var link3 = $("#link3");
-
-
 
 $("#submit-btn").on('click', function () {
+    
     var artist = $('#artist-term').val().trim();
     var artist1 = artist.charAt(0).toUpperCase() + artist.substring(1);
     var newURL = baseURL + authKey + '&query=' + artist;
@@ -55,7 +54,7 @@ $("#submit-btn").on('click', function () {
             console.log("Secondary response below:")
             console.log(response);
 
-            var citySearched = $("#city-term").val().trim();
+            var citySearched = city;
             var citiesIndex = response.resultsPage.results.event.length;
 
             for (var i = 0; i < citiesIndex; i++) {
@@ -111,7 +110,7 @@ $("#submit-btn").on('click', function () {
     function getTickets() {
         var artist = $("#artist-term").val().trim();
         var artist1 = artist.charAt(0).toUpperCase() + artist.substring(1);
-        var citySearched = $("#city-term").val().trim();
+        var citySearched = city
         var ticketURL = baseURL3 + TMauthKey + '&size=200&city=' + citySearched;
 
         $.ajax({
@@ -145,6 +144,7 @@ $("#submit-btn").on('click', function () {
                     var reminder = $("<a>");
                     reminder.attr("href", "Reminder.html");
                     reminder.attr("uk-modal");
+                    reminder.attr("target", "_blank")
                     reminder.text("Sign up for a text reminder ")
                     reminder.attr("style", "font-family: 'Comfortaa', cursive");
                     reminder.append(phoneIcon);
@@ -164,6 +164,7 @@ function initMap() {
         zoom: 12
     });
     infoWindow = new google.maps.InfoWindow;
+
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
@@ -171,6 +172,7 @@ function initMap() {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
+
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             infoWindow.open(map);
@@ -183,10 +185,13 @@ function initMap() {
         handleLocationError(false, infoWindow, map.getCenter());
     }
 }
+
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
     infoWindow.setContent(browserHasGeolocation ?
         'Error: The Geolocation service failed.' :
         'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(map);
+
 };
+
