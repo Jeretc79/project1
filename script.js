@@ -10,11 +10,13 @@ var newURL2 = baseURL2 + city + '&apikey=' + authKey;
 var newURL3 = baseURL3 + TMauthKey + '&city=' + city;
 var newURL4 = baseURL4 + mapAuthKey + '&callback=initMap';
 var concertsURL;
+
 var result1 = $("#result1");
 var result2 = $("#result2");
 var result3 = $("#result3");
 var imageDiv = $("#image1");
 var link1 = $("#link1");
+
 $("#submit-btn").on('click', function () {
     var artist = $('#artist-term').val().trim();
     var artist1 = artist.charAt(0).toUpperCase() + artist.substring(1);
@@ -26,33 +28,24 @@ $("#submit-btn").on('click', function () {
         for (var i = 0; i < results.resultsPage.results.artist.length; i++) {
             if (artist1 == results.resultsPage.results.artist[i].displayName) {
                 var songkickArtist = results.resultsPage.results.artist[i].displayName;
-                console.log("First function artist: " + songkickArtist);
                 concertsURL = results.resultsPage.results.artist[i].identifier[0].eventsHref + "?apikey=uyyV4zESWwQbeQrI";
-                console.log("Songkick foundation URL: " + concertsURL);
                 giveConcerts();
                 getTickets();
             }
         }
     });
+
     function giveConcerts() {
         $.ajax({
             url: concertsURL,
             method: "GET"
         }).then(function (response) {
-            console.log("Secondary response below:")
-            console.log(response);
             var citySearched = city;
             var citiesIndex = response.resultsPage.results.event.length;
             for (var i = 0; i < citiesIndex; i++) {
                 var songkickCity = response.resultsPage.results.event[i].location.city
                 if (citySearched === songkickCity) {
                     var cityMatch = response.resultsPage.results.event[i];
-                    // var showTime = response.resultsPage.results.event[i].start.time;
-                    console.log("City Match test: " + cityMatch.location.city);
-                    console.log("SK City: " + response.resultsPage.results.event[i].location.city);
-                    console.log("SK Venue: " + response.resultsPage.results.event[i].venue.displayName);
-                    console.log("Date: " + response.resultsPage.results.event[i].start.date);
-                    console.log("Time: " + response.resultsPage.results.event[i].start.time);
                     var concertInfo = $("<div>");
                     var title = $("<h3>");
                     title.html(cityMatch.displayName);
@@ -91,6 +84,7 @@ $("#submit-btn").on('click', function () {
             }
         })
     };
+
     function getTickets() {
         var artist = $("#artist-term").val().trim();
         var artist1 = artist.charAt(0).toUpperCase() + artist.substring(1);
@@ -100,13 +94,9 @@ $("#submit-btn").on('click', function () {
             url: ticketURL,
             method: "GET"
         }).then(function (data) {
-            console.log("TM results below:");
-            console.log(data);
             for (var i = 0; i < data._embedded.events.length; i++) {
                 if (artist1 == data._embedded.events[i].name) {
                     var artistResult = data._embedded.events[i].name;
-                    console.log("TM artist: " + artistResult);
-                    console.log("TM url: " + data._embedded.events[i].url);
                     var image = $("<img>");
                     image.attr("src", data._embedded.events[i].images[0].url);
                     image.attr("style", "padding-top: 5px; padding-bottom: 5px; height: 75px, width: 75px;");
@@ -136,6 +126,7 @@ $("#submit-btn").on('click', function () {
         })
     }
 });
+
 var map, infoWindow;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map-canvas'), {
@@ -143,7 +134,6 @@ function initMap() {
         zoom: 12
     });
     infoWindow = new google.maps.InfoWindow;
-    // Try HTML5 geolocation.
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
             var pos = {
@@ -158,10 +148,10 @@ function initMap() {
             handleLocationError(true, infoWindow, map.getCenter());
         });
     } else {
-        // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
     }
 }
+
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
     infoWindow.setContent(browserHasGeolocation ?
