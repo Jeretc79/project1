@@ -66,6 +66,10 @@ The bottom of the page contains a static image and a div containing the ShowMeSh
 
 Bugs:
 - When pages first load, formatting is off and default fonts are shown briefly
+- The map does not always load, and requires the page to be refreshed
+
+Currently Unresolved:
+- Unable to link the user's location from map to the search, so we have a hard-coded location for Portland
 
 Plans for Future Development:
  - List more than one concert, ideally concerts in nearby cities as well as user-located city
