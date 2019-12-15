@@ -52,7 +52,7 @@ Below the map and search results is another parallax image with Lyft and Uber ic
 
 ![Festivals Page](https://i.imgur.com/gYRJKbB.jpg)
 
-When the user navigates to the "Festivals" page via the navbar, they are taken to a page with the same navbar, another parralax image, and a list navigation displayed below.
+When the user navigates to the "Festivals" page via the navbar, they are taken to a page with the same navbar, another parallax image, and a list navigation displayed below.
 
 ![Festivals List Nav](https://i.imgur.com/p5e2nVs.png)
 
