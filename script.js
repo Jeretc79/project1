@@ -1,5 +1,5 @@
 var baseURL = 'https://api.songkick.com/api/3.0/search/artists.json?apikey=';
-var baseURL2 = 'https://api.songkick.com/api/3.0/search/locations.json?query=';
+var baseURL2 = 'http://api.songkick.com/api/3.0/search/locations.json?query=';
 var baseURL3 = 'https://app.ticketmaster.com/discovery/v2/events?apikey=';
 var baseURL4 = 'https://maps.googleapis.com/maps/api/js?key=';
 var authKey = 'uyyV4zESWwQbeQrI';
@@ -18,14 +18,13 @@ var link1 = $("#link1");
 
 $("#submit-btn").on('click', function () {
     var artist = $('#artist-term').val().trim();
-    var artist1 = artist.charAt(0).toUpperCase() + artist.substring(1);
     var newURL = baseURL + authKey + '&query=' + artist;
     $.ajax({
         url: newURL,
         method: "GET"
     }).then(function (results) {
         for (var i = 0; i < results.resultsPage.results.artist.length; i++) {
-            if (artist1 == results.resultsPage.results.artist[i].displayName) {
+            if (artist == results.resultsPage.results.artist[i].displayName) {
                 var songkickArtist = results.resultsPage.results.artist[i].displayName;
                 concertsURL = results.resultsPage.results.artist[i].identifier[0].eventsHref + "?apikey=uyyV4zESWwQbeQrI";
                 giveConcerts();
@@ -86,7 +85,6 @@ $("#submit-btn").on('click', function () {
 
     function getTickets() {
         var artist = $("#artist-term").val().trim();
-        var artist1 = artist.charAt(0).toUpperCase() + artist.substring(1);
         var citySearched = city
         var ticketURL = baseURL3 + TMauthKey + '&size=200&city=' + citySearched;
         $.ajax({
@@ -94,7 +92,7 @@ $("#submit-btn").on('click', function () {
             method: "GET"
         }).then(function (data) {
             for (var i = 0; i < data._embedded.events.length; i++) {
-                if (artist1 == data._embedded.events[i].name) {
+                if (artist == data._embedded.events[i].name) {
                     var artistResult = data._embedded.events[i].name;
                     var image = $("<img>");
                     image.attr("src", data._embedded.events[i].images[0].url);
