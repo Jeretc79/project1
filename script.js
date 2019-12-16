@@ -1,5 +1,5 @@
 var baseURL = 'https://api.songkick.com/api/3.0/search/artists.json?apikey=';
-var baseURL2 = 'https://api.songkick.com/api/3.0/search/locations.json?query=';
+var baseURL2 = 'http://api.songkick.com/api/3.0/search/locations.json?query=';
 var baseURL3 = 'https://app.ticketmaster.com/discovery/v2/events?apikey=';
 var baseURL4 = 'https://maps.googleapis.com/maps/api/js?key=';
 var authKey = 'uyyV4zESWwQbeQrI';
